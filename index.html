@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muhammad Mubashirullah Durrani</title>
+<meta name="description" content="Full stack engineer in Islamabad, Pakistan. Product, design and engineering — AI workflow platforms, React and Next.js frontends, Python backends and agent tooling.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://mubashirullahd.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Muhammad Mubashirullah Durrani">
+<meta property="og:description" content="Full stack engineer. Product, design and engineering — AI workflow platforms and agent tooling.">
+<meta property="og:url" content="https://mubashirullahd.github.io/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231e3a5f'/><text x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23fff' text-anchor='middle'>M</text></svg>">
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: #fbfbfa;
+  --ink: #1a1c1e;
+  --muted: #5c6269;
+  --faint: #8b9198;
+  --rule: #e3e5e8;
+  --accent: #1e3a5f;
+  --line: #b9c2cd;          /* the drawing's stroke */
+  --line-soft: #dfe4ea;
+  --chip: #ffffff;
+  --glow: rgba(30, 58, 95, 0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14161a;
+    --ink: #e8eaed;
+    --muted: #a3aab3;
+    --faint: #767d86;
+    --rule: #2a2f36;
+    --accent: #8fb4de;
+    --line: #454d57;
+    --line-soft: #2b3138;
+    --chip: #1b1f25;
+    --glow: rgba(143, 180, 222, 0.07);
+  }
+}
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  /* a single, very faint wash so the page isn't a flat rectangle */
+  background-image: radial-gradient(ellipse 80% 60% at 72% 18%, var(--glow), transparent 70%);
+  background-repeat: no-repeat;
+}
+
+.wrap {
+  min-height: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: clamp(2rem, 7vh, 5rem) 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4rem);
+}
+
+/* ── text column ──────────────────────────────────────────────────────── */
+
+h1 {
+  font-family: Charter, Georgia, "Times New Roman", serif;
+  font-size: clamp(2.1rem, 5.4vw, 3.15rem);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.85rem;
+  text-wrap: balance;           /* let the column decide the line breaks */
+}
+
+.role {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 1.6rem;
+}
+
+.role::before {
+  content: "";
+  width: 1.6rem;
+  height: 1px;
+  background: var(--line);
+}
+
+.intro {
+  font-size: clamp(1rem, 1.35vw, 1.09rem);
+  color: var(--muted);
+  margin: 0 0 2.2rem;
+  max-width: 34ch;
+}
+
+.intro em {
+  font-style: normal;
+  color: var(--ink);
+}
+
+/* ── links ────────────────────────────────────────────────────────────── */
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.7rem 1.4rem;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.68rem 1.25rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--bg);
+  font-size: 0.94rem;
+  font-weight: 550;
+  text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+}
+
+.cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px -8px var(--accent);
+}
+
+.cta svg { transition: transform 0.18s ease; }
+.cta:hover svg { transform: translateX(3px); }
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.15rem;
+}
+
+.links a {
+  font-size: 0.92rem;
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.links a:hover {
+  color: var(--ink);
+  border-bottom-color: var(--line);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── the drawing ──────────────────────────────────────────────────────── */
+
+.art { width: 100%; height: auto; overflow: visible; }
+
+.art .node {
+  fill: var(--chip);
+  stroke: var(--line);
+  stroke-width: 1.25;
+}
+
+.art .node--accent { stroke: var(--accent); }
+
+.art .edge {
+  fill: none;
+  stroke: var(--line);
+  stroke-width: 1.25;
+  stroke-linecap: round;
+}
+
+.art .bar {                      /* the little rules inside each node */
+  stroke: var(--line-soft);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+
+.art .port { fill: var(--line); }
+.art .port--accent { fill: var(--accent); }
+
+/* A ring, not a disc — a CSS `fill` would otherwise beat the presentation
+   attribute and turn this into a blob. */
+.art .pulse {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 1.25;
+  opacity: 0.28;
+}
+
+/* Draw-in: edges stroke themselves, nodes settle in behind them.
+   pathLength="1" normalises every path so one timing works for all. */
+@media (prefers-reduced-motion: no-preference) {
+  .art .edge {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: draw 1.1s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  }
+  .art .grp {
+    opacity: 0;
+    animation: settle 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  .art .pulse {
+    transform-origin: center;
+    animation: breathe 4.5s ease-in-out 2s infinite;
+  }
+
+  .grp:nth-of-type(1) { animation-delay: 0.05s }
+  .grp:nth-of-type(2) { animation-delay: 0.17s }
+  .grp:nth-of-type(3) { animation-delay: 0.24s }
+  .grp:nth-of-type(4) { animation-delay: 0.31s }
+  .grp:nth-of-type(5) { animation-delay: 0.45s }
+  .grp:nth-of-type(6) { animation-delay: 0.52s }
+
+  .edge:nth-of-type(1) { animation-delay: 0.30s }
+  .edge:nth-of-type(2) { animation-delay: 0.36s }
+  .edge:nth-of-type(3) { animation-delay: 0.42s }
+  .edge:nth-of-type(4) { animation-delay: 0.60s }
+  .edge:nth-of-type(5) { animation-delay: 0.66s }
+  .edge:nth-of-type(6) { animation-delay: 0.72s }
+  .edge:nth-of-type(7) { animation-delay: 0.78s }
+
+  .reveal {
+    opacity: 0;
+    animation: rise 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  .reveal:nth-child(1) { animation-delay: 0.04s }
+  .reveal:nth-child(2) { animation-delay: 0.12s }
+  .reveal:nth-child(3) { animation-delay: 0.20s }
+  .reveal:nth-child(4) { animation-delay: 0.28s }
+}
+
+@keyframes draw    { to { stroke-dashoffset: 0 } }
+@keyframes settle  { from { opacity: 0; transform: translateY(6px) } to { opacity: 1; transform: none } }
+@keyframes rise    { from { opacity: 0; transform: translateY(10px) } to { opacity: 1; transform: none } }
+@keyframes breathe { 0%, 100% { opacity: 0.28 } 50% { opacity: 0.75 } }
+
+/* ── footer ───────────────────────────────────────────────────────────── */
+
+footer {
+  grid-column: 1 / -1;
+  margin-top: clamp(2.5rem, 8vh, 5rem);
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.83rem;
+  color: var(--faint);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+footer a { color: var(--faint); text-decoration: none; border-bottom: 1px solid var(--rule); }
+footer a:hover { color: var(--muted); }
+
+/* ── narrow ───────────────────────────────────────────────────────────── */
+
+@media (max-width: 780px) {
+  .wrap {
+    grid-template-columns: 1fr;
+    align-content: start;
+    gap: 2.5rem;
+    padding-top: clamp(2rem, 5vh, 3rem);
+  }
+  .art-col { order: -1; max-width: 22rem; }
+  .intro { max-width: none; }
+}
+
+@media (max-width: 420px) {
+  .actions { gap: 1rem }
+  .links { gap: 0.9rem }
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="text-col">
+    <p class="role reveal">Full Stack Engineer</p>
+    <h1 class="reveal">Muhammad Mubashirullah Durrani</h1>
+    <p class="intro reveal">
+      I work where product, design and engineering meet — most recently an
+      <em>AI workflow platform</em>, and the agent tooling that lets people use it
+      without needing to understand it.
+    </p>
+
+    <div class="actions reveal">
+      <a class="cta" href="/cv/">
+        Read my CV
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <div class="links">
+        <a href="https://github.com/mubashirullahd">GitHub</a>
+        <a href="https://www.linkedin.com/in/muhammad-mubashirullah-durrani/">LinkedIn</a>
+        <a href="mailto:mdurrani.cs@gmail.com">Email</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="art-col">
+    <!-- A directed graph: inputs fanning out, converging into two outputs.
+         It echoes the workflow canvas I build for a living without spelling
+         anything out. Decorative only, so it's hidden from assistive tech. -->
+    <svg class="art" viewBox="0 0 400 320" role="img"
+         aria-label="Line drawing of a branching workflow graph">
+
+      <!-- edges first, so nodes sit on top of the joins -->
+      <path class="edge" pathLength="1" d="M 90 160 C 121 160, 121 70, 152 70"/>
+      <path class="edge" pathLength="1" d="M 90 160 L 152 160"/>
+      <path class="edge" pathLength="1" d="M 90 160 C 121 160, 121 250, 152 250"/>
+      <path class="edge" pathLength="1" d="M 228 70 C 259 70, 259 115, 290 115"/>
+      <path class="edge" pathLength="1" d="M 228 160 C 259 160, 259 115, 290 115"/>
+      <path class="edge" pathLength="1" d="M 228 160 C 259 160, 259 205, 290 205"/>
+      <path class="edge" pathLength="1" d="M 228 250 C 259 250, 259 205, 290 205"/>
+
+      <g class="grp">
+        <rect class="node" x="14" y="145" width="76" height="30" rx="15"/>
+        <path class="bar" d="M 30 160 h 26"/>
+        <circle class="port" cx="90" cy="160" r="2.75"/>
+      </g>
+
+      <g class="grp">
+        <rect class="node" x="152" y="55" width="76" height="30" rx="15"/>
+        <path class="bar" d="M 168 70 h 32"/>
+        <circle class="port" cx="152" cy="70" r="2.75"/>
+        <circle class="port" cx="228" cy="70" r="2.75"/>
+      </g>
+
+      <g class="grp">
+        <rect class="node node--accent" x="152" y="145" width="76" height="30" rx="15"/>
+        <path class="bar" d="M 168 160 h 32"/>
+        <circle class="port port--accent" cx="152" cy="160" r="2.75"/>
+        <circle class="port port--accent" cx="228" cy="160" r="2.75"/>
+        <circle class="pulse" cx="190" cy="160" r="15"/>
+      </g>
+
+      <g class="grp">
+        <rect class="node" x="152" y="235" width="76" height="30" rx="15"/>
+        <path class="bar" d="M 168 250 h 22"/>
+        <circle class="port" cx="152" cy="250" r="2.75"/>
+        <circle class="port" cx="228" cy="250" r="2.75"/>
+      </g>
+
+      <g class="grp">
+        <rect class="node" x="290" y="100" width="76" height="30" rx="15"/>
+        <path class="bar" d="M 306 115 h 30"/>
+        <circle class="port" cx="290" cy="115" r="2.75"/>
+      </g>
+
+      <g class="grp">
+        <rect class="node" x="290" y="190" width="76" height="30" rx="15"/>
+        <path class="bar" d="M 306 205 h 24"/>
+        <circle class="port" cx="290" cy="205" r="2.75"/>
+      </g>
+    </svg>
+  </div>
+
+  <footer>
+    <span>Islamabad, Pakistan</span>
+    <span>Built from <a href="/cv/">one data file</a>.</span>
+  </footer>
+
+</div>
+
+</body>
+</html>
